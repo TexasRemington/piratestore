@@ -1,0 +1,28 @@
+<nav>
+    {{#if category.subcategories}}
+        <div class="sidebarBlock">
+            <h5 class="sidebarBlock-heading">{{category.name}}</h5>
+            <ul class="navList">
+                {{#each category.subcategories}}
+                <li class="navList-item">
+                    <a class="navList-action" href="{{url}}" alt="{{name}}" title="{{name}}">{{name}}</a>
+                </li>
+                {{/each}}
+            </ul>
+        </div>
+    {{/if}}
+
+    {{#if category.faceted_search_enabled}}
+        {{> components/faceted-search/index category}}
+    {{else}}
+        {{> components/brand/sidebar sidebar=category.sidebar category_url=category.url}}
+        {{> components/category/shop-by-price shop_by_price=category.shop_by_price category_url=category.url}}
+        {{> components/category/sort-box sort=sort}}
+        {{> components/common/navigation-menu}}
+    {{/if}}
+
+
+<button type="button" onclick="addThree()" >Add 3 to Cart</button>
+
+</nav>
+<script src="{{cdn 'assets/js/theme/AddItem.js'}}"></script>

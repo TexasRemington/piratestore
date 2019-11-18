@@ -1,0 +1,11 @@
+{
+  "normalStoreUrl": "https://the-pirate-store.mybigcommerce.com",
+  "accessToken": "i4nqezudv7521778xk7ga123vj55b7f",
+  "port": 3000,
+  "customLayouts": {
+    "brand": {},
+    "category": {},
+    "page": {},
+    "product": {}
+  }
+}
